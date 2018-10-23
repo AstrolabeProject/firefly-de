@@ -1,0 +1,33 @@
+# General
+**/.DS_Store
+
+# IDEs
+## IDEA
+*.iml
+*.ipr
+*.iws
+.idea
+.settings
+
+# Grails
+target
+out
+.sass-cache
+.project
+.classpath
+.settings
+stacktrace.log
+
+# Gradle
+.gradle
+node_modules
+build
+buildPlugins
+buildSrc/build
+
+# Java
+/classes/
+/targets/
+*.class
+*.war
+*.jar
