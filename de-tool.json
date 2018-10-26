@@ -1,0 +1,43 @@
+{
+  "tools": [
+    {
+      "id": "61ce4ea0-c49e-43e9-a441-75e433c9244d",
+      "description" : "CalTech-IPAC Firefly server",
+      "interactive" : true,
+      "name" : "firefly_de",
+      "type" : "interactive",
+      "restricted" : false,
+      "container" : {
+        "min_cpu_cores" : 0.1,
+        "max_cpu_cores" : 2.0,
+        "memory_limit" : 4000000000,
+        "interactive_apps" : {
+          "image" : "discoenv/cas-proxy",
+          "name" : "cas-proxy",
+          "cas_url" : "https://auth.iplantcollaborative.org/cas4/",
+          "cas_validate" : "validate"
+        },
+        "container_ports" : [{
+          "container_port" : 8080
+        }],
+        "network_mode" : "bridge",
+        "skip_tmp_mount" : true,
+        "working_directory" : "/home/jovyan/vice",
+        "image" : {
+          "name" : "gims.cyverse.org:5000/firefly",
+          "tag" : "1.0"
+        },
+        "uid" : 1000
+      },
+      "version" : "0.0.1",
+      "implementation" : {
+        "implementor" : "Tom Hicks",
+        "implementor_email" : "hickst@email.arizona.edu",
+        "test" : {
+          "input_files" : [],
+          "output_files" : []
+        }
+      }
+    }
+  ]
+}
