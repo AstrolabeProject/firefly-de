@@ -14,15 +14,7 @@ RUN apt-get update \
     && rm -rf /usr/lib/apt/lists/*
 
 # see https://www.apache.org/dist/tomcat/tomcat-8/KEYS
-RUN gpg --keyserver pool.sks-keyservers.net --recv-keys \
-F22C4FED \
-86867BA6 \
-E86E29AC \
-307A10A5 \
-564C17A3 \
-33C60243 \
-2F6059E7 \
-288584E7 \
+RUN gpg --keyserver pgpkeys.mit.edu --recv-keys \
 0D811BBE \
 731FABEE \
 0D498E23 \
