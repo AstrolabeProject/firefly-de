@@ -1,0 +1,4 @@
+Example build and run (assumes firefly.war in build directory):
+--------------------------------------------------------------
+dk build -t firefly-de . 
+dk run -d --rm --name ff -p8080:8080 -v /Users/hickst/UAZ/iSchool/data/:/data firefly:4.0

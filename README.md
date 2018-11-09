@@ -1,3 +1,3 @@
 # Firefly Server
 
-Build the Caltech/IPAC Firefly server as a Docker image.
+Build the Caltech/IPAC Firefly astronomical viewer/server running as a Tomcat 8 web application in Docker.
