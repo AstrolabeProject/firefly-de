@@ -1,7 +1,7 @@
 {
   "tools": [
     {
-      "id": "cf0a19cb-8e03-4590-9fd1-ffa4ef8a499f",
+      "id": "ebd31a56-fde3-4421-8868-2c3dbc34c263",
       "description" : "CalTech-IPAC Firefly viewer on Tomcat 8",
       "interactive" : true,
       "name" : "firefly_de",
@@ -25,11 +25,11 @@
         "working_directory" : "/home/jovyan/vice",
         "image" : {
           "name" : "gims.cyverse.org:5000/firefly",
-          "tag" : "2.0"
+          "tag" : "3.0"
         },
         "uid" : 1000
       },
-      "version" : "0.0.2",
+      "version" : "0.0.3",
       "implementation" : {
         "implementor" : "Tom Hicks",
         "implementor_email" : "hickst@email.arizona.edu",
