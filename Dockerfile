@@ -21,7 +21,7 @@ RUN apt-get update \
 # D63011C7
 
 ENV TOMCAT_MAJOR 8
-ENV TOMCAT_VERSION 8.0.53
+ENV TOMCAT_VERSION 8.5.37
 ENV TOMCAT_TGZ_URL https://www.apache.org/dist/tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz
 
 RUN set -x \
@@ -36,7 +36,7 @@ RUN set -x \
 RUN mkdir /data
 
 COPY ./firefly.war $CATALINA_HOME/webapps/firefly.war
-COPY ./tomcat-users.xml /usr/local/tomcat/conf/
+# COPY ./tomcat-users.xml /usr/local/tomcat/conf/
 ENV CATALINA_OPTS -server -Xms512m -Xmx2048m -XX:MaxPermSize=256m
 
 EXPOSE 8080
