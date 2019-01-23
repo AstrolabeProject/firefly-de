@@ -1,43 +1,50 @@
 {
-  "tools": [
-    {
-      "id": "1cd3537f-4556-4e07-ac81-0b7dc42f5f35",
-      "description" : "CalTech-IPAC Firefly viewer on Tomcat 8.5",
-      "interactive" : true,
-      "name" : "firefly_de",
-      "type" : "interactive",
-      "restricted" : false,
-      "container" : {
-        "min_cpu_cores" : 0.1,
-        "max_cpu_cores" : 2.0,
-        "memory_limit" : 4000000000,
-        "interactive_apps" : {
-          "image" : "discoenv/cas-proxy",
-          "name" : "cas-proxy",
-          "cas_url" : "https://auth.iplantcollaborative.org/cas4/",
-          "cas_validate" : "validate"
-        },
-        "container_ports" : [{
-          "container_port" : 8080
-        }],
-        "network_mode" : "bridge",
-        "skip_tmp_mount" : true,
-        "working_directory" : "/home/jovyan/vice",
-        "image" : {
-          "name" : "gims.cyverse.org:5000/firefly",
-          "tag" : "1.0"
-        },
-        "uid" : 1000
-      },
-      "version" : "1.0.0",
-      "implementation" : {
-        "implementor" : "Tom Hicks",
-        "implementor_email" : "hickst@email.arizona.edu",
-        "test" : {
-          "input_files" : [],
-          "output_files" : []
-        }
+  "description": "CalTech-IPAC Firefly viewer on Tomcat 8.5",
+  "permission": "read",
+  "interactive": true,
+  "name": "firefly_de",
+  "type": "interactive",
+  "restricted": false,
+  "is_public": true,
+  "id": "1cd3537f-4556-4e07-ac81-0b7dc42f5f35",
+  "container": {
+    "interactive_apps": {
+      "id": "e413acf4-185e-11e9-9711-008cfa5ae621",
+      "image": "discoenv/cas-proxy",
+      "name": "cas-proxy",
+      "cas_url": "https://auth.cyverse.org/cas5/",
+      "cas_validate": "validate"
+    },
+    "max_cpu_cores": 2,
+    "container_ports": [
+      {
+        "id": "e4140c6c-185e-11e9-9711-008cfa5ae621",
+        "container_port": 8080,
+        "bind_to_host": false
       }
+    ],
+    "min_cpu_cores": 0.1,
+    "uid": 1000,
+    "working_directory": "/home/jovyan/vice",
+    "skip_tmp_mount": true,
+    "id": "e4136eb0-185e-11e9-9711-008cfa5ae621",
+    "memory_limit": 4000000000,
+    "network_mode": "bridge",
+    "image": {
+      "name": "gims.cyverse.org:5000/firefly",
+      "id": "cc1f87d2-dbda-11e8-b360-008cfa5ae621",
+      "tag": "1.0",
+      "deprecated": false
     }
-  ]
+  },
+  "version": "1.0.0",
+  "implementation": {
+    "implementor": "Tom Hicks",
+    "implementor_email": "hickst@email.arizona.edu",
+    "test": {
+      "input_files": [],
+      "output_files": []
+    }
+  },
+  "time_limit_seconds": 0
 }
